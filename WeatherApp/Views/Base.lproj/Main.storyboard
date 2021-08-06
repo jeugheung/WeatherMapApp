@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Devices-Google-Pixel-2-XL-mobile-tablet-HD-Wallpaper-1593856150" translatesAutoresizingMaskIntoConstraints="NO" id="30a-d9-kpv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="MJ1-ag-Ifl">
+                                <rect key="frame" x="99.5" y="192" width="215" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="eo2-lx-QBr"/>
+                                    <constraint firstAttribute="width" constant="215" id="mpA-Eg-maF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almaty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-vO-ou9">
+                                <rect key="frame" x="165" y="98" width="84" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goP-rD-zOl">
+                                <rect key="frame" x="99.5" y="379" width="215" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="UwV-Cs-Fjb"/>
+                                    <constraint firstAttribute="width" constant="215" id="gnz-Mp-M9O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntq-IT-OZe">
+                                <rect key="frame" x="164" y="789" width="86" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="Jew-UM-vAa"/>
+                                    <constraint firstAttribute="height" constant="32" id="emx-KW-Q5H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title=" City" image="loupe (2)"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels like 23 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mN-rP-9Ut">
+                                <rect key="frame" x="99.5" y="464" width="215" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="030-qx-E4O"/>
+                                    <constraint firstAttribute="width" constant="215" id="NFm-EW-i31"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="30a-d9-kpv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6JL-HJ-6sn"/>
+                            <constraint firstItem="MJ1-ag-Ifl" firstAttribute="top" secondItem="9x2-vO-ou9" secondAttribute="bottom" constant="65" id="Cac-gw-3uy"/>
+                            <constraint firstItem="9x2-vO-ou9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="OxK-fJ-fpO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ntq-IT-OZe" secondAttribute="bottom" constant="41" id="SpA-Li-ajP"/>
+                            <constraint firstItem="30a-d9-kpv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VLw-Jk-qhG"/>
+                            <constraint firstItem="goP-rD-zOl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIY-g7-cpA"/>
+                            <constraint firstAttribute="bottom" secondItem="30a-d9-kpv" secondAttribute="bottom" id="YO4-Tn-mSt"/>
+                            <constraint firstItem="goP-rD-zOl" firstAttribute="top" secondItem="MJ1-ag-Ifl" secondAttribute="bottom" constant="10" id="cfN-7m-vw7"/>
+                            <constraint firstItem="Ntq-IT-OZe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ep4-W6-CV0"/>
+                            <constraint firstItem="30a-d9-kpv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pPV-FP-hpm"/>
+                            <constraint firstItem="3mN-rP-9Ut" firstAttribute="top" secondItem="goP-rD-zOl" secondAttribute="bottom" constant="10" id="rK0-Uc-MYL"/>
+                            <constraint firstItem="9x2-vO-ou9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s69-9H-5Wj"/>
+                            <constraint firstItem="MJ1-ag-Ifl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxo-Nf-pWZ"/>
+                            <constraint firstItem="3mN-rP-9Ut" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zX0-Dy-n80"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Devices-Google-Pixel-2-XL-mobile-tablet-HD-Wallpaper-1593856150" width="1200" height="2714"/>
+        <image name="cloud" width="128" height="128"/>
+        <image name="loupe (2)" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
