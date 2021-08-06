@@ -50,6 +50,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                 <state key="normal" title=" City" image="loupe (2)"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zjc-0N-IEs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels like 23 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mN-rP-9Ut">
                                 <rect key="frame" x="99.5" y="464" width="215" height="42"/>
@@ -81,6 +84,12 @@
                             <constraint firstItem="3mN-rP-9Ut" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zX0-Dy-n80"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="9x2-vO-ou9" id="t8g-xt-X3m"/>
+                        <outlet property="feelsLikeTemperatureLabel" destination="3mN-rP-9Ut" id="Il4-Lk-aWq"/>
+                        <outlet property="temperatureLabel" destination="goP-rD-zOl" id="BmU-tl-grM"/>
+                        <outlet property="weatherIconImageView" destination="MJ1-ag-Ifl" id="XKa-1H-cRW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
