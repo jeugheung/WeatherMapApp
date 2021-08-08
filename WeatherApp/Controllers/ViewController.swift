@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkWeatherManager.delegate = self
         networkWeatherManager.fetchCurrentWeather(forCity: "London")
         
     }
@@ -28,6 +29,13 @@ class ViewController: UIViewController {
         self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { city in
             self.networkWeatherManager.fetchCurrentWeather(forCity: city)
         }
+    }
+}
+
+extension ViewController: NetworkWeatherManagerDelegate {
+    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather) {
+        print(currentWeather.cityName)
+        
     }
 }
 
