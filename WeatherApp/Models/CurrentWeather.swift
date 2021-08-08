@@ -11,13 +11,35 @@ struct CurrentWeather {
     let cityName: String
     let temperature: Double
     var temperatureString: String {
-        return "\(temperature.rounded())"
+        return String(format: "%.0f", temperature)
     }
     let feelsLikeTemperature: Double
     var feelsLikeTemperatureString: String {
-        return "\(feelsLikeTemperature.rounded())"
+        return String(format: "%.0f", feelsLikeTemperature)
     }
     let conditionCode: Int
+    var systemIconNameString: String {
+        switch conditionCode {
+        case 200...232:
+            return "rain"
+        case 300...321:
+            return "rain"
+        case 500...531:
+            return "rain"
+        case 600...622:
+            return "winter"
+        case 701...781:
+            return "cumulus"
+        case 800:
+            return "sun"
+        case 801...804:
+            return "cloud"
+        default:
+            return "nosign"
+        }
+        
+    }
+    
     
     init?(currentWeatherData: currentWeatherData) {
         cityName = currentWeatherData.name

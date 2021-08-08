@@ -33,10 +33,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goP-rD-zOl">
-                                <rect key="frame" x="99.5" y="379" width="215" height="75"/>
+                                <rect key="frame" x="117" y="379" width="180" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="UwV-Cs-Fjb"/>
-                                    <constraint firstAttribute="width" constant="215" id="gnz-Mp-M9O"/>
+                                    <constraint firstAttribute="width" constant="180" id="gnz-Mp-M9O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
