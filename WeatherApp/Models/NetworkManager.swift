@@ -7,13 +7,12 @@
 
 import Foundation
 
-protocol NetworkWeatherManagerDelegate: AnyObject {
-    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather)
-}
 
 class NetworkWeatherManager {
     
-    weak var delegate: NetworkWeatherManagerDelegate?
+    var onCompletion: ((CurrentWeather) -> Void)?
+    
+    
     func fetchCurrentWeather(forCity city: String) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=4498b43ea8fb6a3bf308d30f31c30a01"
         guard let url = URL(string: urlString) else { return }
@@ -21,9 +20,10 @@ class NetworkWeatherManager {
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let currentWeather = self.parseJSON(withData: data) {
-                    self.delegate?.updateInterface(self, with: currentWeather)
+                    self.onCompletion?(currentWeather)
                     
-                }
+                    
+                }    
             }
         }
         task.resume()
